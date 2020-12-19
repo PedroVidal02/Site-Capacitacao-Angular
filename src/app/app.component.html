@@ -1,4 +1,5 @@
 <jad-header></jad-header>
 
-<jad-student *ngFor="let student of students" [student]="student"></jad-student>
+<jad-student (studenttodelete)="deleteStudent($event)" *ngFor="let student of students" [student]="student"></jad-student>
+
 <jad-additems (studenttopass)="addStudent($event)"></jad-additems>

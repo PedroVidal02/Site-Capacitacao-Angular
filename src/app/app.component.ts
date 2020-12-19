@@ -18,6 +18,10 @@ export class AppComponent {
 
   addStudent(newstudent: Student) {
     this.students.push(newstudent)
-    console.log(this.students)
+  }
+
+  deleteStudent(deleteName: string){
+    let index = this.students.findIndex(x => x.name === deleteName)
+    this.students.splice(index,1);
   }
 }
