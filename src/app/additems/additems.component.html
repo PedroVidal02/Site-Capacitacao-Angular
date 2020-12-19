@@ -1,5 +1,5 @@
 <div>
-    <input #namebox>
+    <textarea #namebox></textarea>
     <input name="isJedi" type="checkbox" [(ngModel)]="jediCheck">isJedi?
     <button (click)="passStudent(namebox.value, jediCheck); clearinput(namebox)">Send</button>
 </div>
