@@ -10,13 +10,19 @@ export class AdditemsComponent implements OnInit {
   constructor() { }
 
   newstudent: Student = {name: 'Empty', isJedi: false, temple: 'Empty'}
+  jediCheck: boolean
 
   @Output() studenttopass = new EventEmitter<Student>();
 
-  passStudent(namestudent: string){
-    this.newstudent = {name: namestudent, isJedi: false, temple: 'Empty'}
+  passStudent(namestudent: string, jediCheck: boolean){
+    this.newstudent = {name: namestudent, isJedi: jediCheck, temple: 'Empty'}
     
     this.studenttopass.emit(this.newstudent)
+  }
+
+  clearinput(input1: HTMLInputElement) {
+    input1.value = ''
+    this.jediCheck = false
   }
 
   ngOnInit(): void {

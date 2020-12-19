@@ -1,4 +1,5 @@
 <div>
     <input #namebox>
-    <button (click)="passStudent(namebox.value)">Send</button>
+    <input name="isJedi" type="checkbox" [(ngModel)]="jediCheck">isJedi?
+    <button (click)="passStudent(namebox.value, jediCheck); clearinput(namebox)">Send</button>
 </div>
